@@ -1,5 +1,5 @@
 {
-  "name": "react-spinners",
+  "name": "@manudeli/react-spinners",
   "version": "1.0.0",
   "description": "Spinners for React",
   "main": "dist/bundle.cjs.js",
@@ -92,6 +92,9 @@
       "npm run test",
       "git add"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {}
 }
