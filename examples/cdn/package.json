@@ -1,0 +1,15 @@
+{
+  "name": "cdn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "serve"
+  },
+  "dependencies": {
+    "react-spinners": "../.."
+  },
+  "devDependencies": {
+    "serve": "^14.1.2"
+  }
+}
