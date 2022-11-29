@@ -4,6 +4,8 @@
   "description": "Spinners for React",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint '**/*.js'",
+    "lint:fix": "prettier-eslint '**/*.js' --write",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,17 @@
   "bugs": {
     "url": "https://github.com/manudeli/react-spinners/issues"
   },
-  "homepage": "https://github.com/manudeli/react-spinners#readme"
+  "homepage": "https://github.com/manudeli/react-spinners#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.31.11",
+    "prettier-eslint-cli": "^7.1.0",
+    "typescript": "*"
+  }
 }
