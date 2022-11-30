@@ -1,7 +1,7 @@
 const { createElement } = require('react')
 const express = require('express')
 const { renderToString } = require('react-dom/server')
-const Spinner = require('react-spinners')
+const { Spinner } = require('react-spinners')
 
 const port = 3000
 const app = express()

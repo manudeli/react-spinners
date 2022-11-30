@@ -1,12 +1,10 @@
 import React from 'react'
-import Spinner from 'react-spinners'
+import { Spinner } from 'react-spinners'
 
-function App () {
+export default function App () {
   return (
     <div className="App">
-      <Spinner/>
+      <Spinner />
     </div>
   )
 }
-
-export default App

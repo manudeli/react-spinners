@@ -2,8 +2,8 @@
   "name": "@manudeli/react-spinners",
   "version": "1.0.0",
   "description": "Spinners for React",
-  "main": "dist/bundle.cjs.js",
-  "module": "dist/bundle.esm.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "files": [
     "dist"
   ],
@@ -11,7 +11,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "prebuild": "yarn clean",
-    "build": "rollup -c",
+    "build": "tsc --emitDeclarationOnly --declarationDir dist && rollup -c",
     "lint": "eslint '**/*.js'",
     "lint:fix": "prettier-eslint '**/*.js' --write",
     "test": "jest",
@@ -39,6 +39,7 @@
     "@babel/core": "^7.20.5",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
     "@storybook/addon-actions": "^6.5.13",
     "@storybook/addon-essentials": "^6.5.13",
     "@storybook/addon-interactions": "^6.5.13",
@@ -47,6 +48,8 @@
     "@storybook/manager-webpack4": "^6.5.13",
     "@storybook/react": "^6.5.13",
     "@storybook/testing-library": "^0.0.13",
+    "@types/jest": "^29.2.3",
+    "@types/react": "^18.0.25",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.45.0",
     "babel-jest": "^29.3.1",
@@ -73,7 +76,7 @@
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-terser": "^7.0.2",
-    "typescript": "*"
+    "typescript": "^4.9.3"
   },
   "peerDependencies": {
     "react": ">=16.8.0 || ^17.0.0 || ^18"

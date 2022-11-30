@@ -10,7 +10,8 @@
         }
       }
     ],
-    "@babel/react"
+    ["@babel/preset-typescript"],
+    ["@babel/react"]
   ],
   "env": {
     "test": {

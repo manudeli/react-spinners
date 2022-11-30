@@ -2,15 +2,19 @@ import babel from 'rollup-plugin-babel'
 import resolve from 'rollup-plugin-node-resolve'
 import { terser } from 'rollup-plugin-terser'
 const dist = 'dist'
-const bundle = 'bundle'
+const bundle = 'index'
 
 const production = !process.env.ROLLUP_WATCH
+const extensions = ['.js', '.jsx', '.ts', '.tsx']
 
+/**
+ * @type {import('rollup').RollupOptions}
+ */
 export default {
-  input: 'src/index.js',
+  input: 'src/index.ts',
   output: [
     {
-      file: `${dist}/${bundle}.cjs.js`,
+      file: `${dist}/${bundle}.js`,
       format: 'cjs'
     },
     {
@@ -27,8 +31,11 @@ export default {
     }
   ],
   plugins: [
-    resolve(),
+    resolve({
+      extensions
+    }),
     babel({
+      extensions,
       exclude: 'node_modules/**'
     }),
     production && terser()
